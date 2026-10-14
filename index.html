@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore lançamentos, tênis de corrida e novidades esportivas.">
+  <title>Nike — Just Do It</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="topbar">
+    <a href="#" aria-label="Jordan">JORDAN</a>
+    <a href="#" aria-label="Converse">CONVERSE</a>
+    <div class="top-links">
+      <a href="#">Encontre uma loja Nike</a>
+      <span>|</span>
+      <a href="#">Ajuda</a>
+      <span>|</span>
+      <a href="#">Entrar</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <a class="nike-logo" href="#" aria-label="Nike início">
+      <svg viewBox="0 0 70 28" role="img" aria-label="Nike">
+        <path fill="currentColor"
+          d="M2 20.5 68 0 24 26C12 32 2 26 2 20.5Z"/>
+      </svg>
+    </a>
+
+    
+
+    <div class="header-actions">
+      <button class="icon-button search-toggle" aria-label="Buscar">
+        <svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/></svg>
+      </button>
+      <button class="icon-button" aria-label="Favoritos">
+        <svg viewBox="0 0 24 24"><path d="M20.8 8.8c0 5-8.8 11-8.8 11s-8.8-6-8.8-11A4.8 4.8 0 0 1 12 6.2a4.8 4.8 0 0 1 8.8 2.6Z"/></svg>
+      </button>
+      <button class="icon-button bag-button" aria-label="Sacola">
+        <svg viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
+        <span class="bag-count" id="bagCount">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <form class="search-bar" id="searchBar" role="search">
+    <input type="search" id="searchInput"
+      placeholder="Buscar produtos Nike..." aria-label="Buscar produtos">
+    <button type="submit">Buscar</button>
+  </form>
+
+  <section class="promo-bar" aria-label="Promoção">
+    <button class="promo-arrow" id="promoPrev" aria-label="Promoção anterior">‹</button>
+    <p id="promoText">Tênis de corrida <span>Encontre o seu tênis ideal.</span>
+      <a href="#colecoes">Saiba Mais</a></p>
+    <button class="promo-arrow" id="promoNext" aria-label="Próxima promoção">›</button>
+  </section>
+
+  <main>
+    <section class="hero" id="hero" aria-label="Bright Lights Pack">
+      <div class="hero-overlay"></div>
+      <button class="hero-arrow hero-prev" id="heroPrev"
+        aria-label="Banner anterior">‹</button>
+
+      <div class="hero-content">
+        <p class="eyebrow" id="heroEyebrow">NOVAS CORES. NOVA ENERGIA.</p>
+        <h1 id="heroTitle">BRIGHT LIGHTS PACK</h1>
+        <p id="heroDescription">Velocidade, precisão e controle.</p>
+        <button class="buy-button" id="buyButton">Comprar</button>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-dots" id="heroDots" aria-label="Selecionar banner">
+          <button class="dot active" data-slide="0" aria-label="Banner 1"></button>
+          <button class="dot" data-slide="1" aria-label="Banner 2"></button>
+          <button class="dot" data-slide="2" aria-label="Banner 3"></button>
+        </div>
+        <div class="hero-controls">
+          <button id="pauseButton" aria-label="Pausar carrossel">Ⅱ</button>
+          <button id="heroPrevBottom" aria-label="Anterior">‹</button>
+          <button id="heroNext" aria-label="Próximo">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-grid" id="colecoes">
+      <article class="feature-card running-card">
+        <img
+          src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1400&q=85"
+          alt="Pessoa treinando corrida ao ar livre">
+        <div class="feature-content">
+          <span>SUPERE SEUS LIMITES</span>
+          <h2>Feito para correr.</h2>
+          <button class="light-button" data-category="corrida">Explorar</button>
+        </div>
+      </article>
+
+      <article class="feature-card training-card">
+        <img
+          src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=1400&q=85"
+          alt="Atleta em treinamento">
+        <div class="feature-content">
+          <span>PERFORMANCE EM MOVIMENTO</span>
+          <h2>Treine do seu jeito.</h2>
+          <button class="light-button" data-category="treino">Descobrir</button>
+        </div>
+      </article>
+    </section>
+    <section class="new-section">
+      <p class="eyebrow">EXPLORE A NIKE</p>
+      <h2>Encontre o seu próximo favorito.</h2>
+      <div class="category-grid">
+        <button class="category-card" data-category="masculino">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Tênis esportivo">
+          <span>Masculino</span>
+        </button>
+        <button class="category-card" data-category="feminino">
+          <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80" alt="Calçado esportivo">
+          <span>Feminino</span>
+        </button>
+        <button class="category-card" data-category="infantil">
+          <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=700&q=80" alt="Tênis casual">
+          <span>Infantil</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">NIKE</div>
+    <p>JUST DO IT.</p>
+    <span>Projeto demonstrativo de engenharia reversa visual.</span>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
